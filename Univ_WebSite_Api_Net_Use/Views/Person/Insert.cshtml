@@ -1,0 +1,23 @@
+﻿@using Univ_WebSite_Api_Net_Use.Models
+@model Person
+@{
+    ViewBag.Title = "Insert";
+}
+
+<h2>Insert</h2>
+
+
+<form action="Insert" method="post">
+    نام<input type="text" name="Name" value="hasan" /><br />
+    نام خانوادگی<input type="text" name="Family" value="hasani" /><br />
+    عکس<input type="text" name="Picture" value="--" /><br />
+    تاریخ تولد<input type="date" name="BirthDate" value="2020-02-03" /><br />
+
+    مرد<input type="radio" name="Sex" value="true" checked /><br />
+    زن<input type="radio" name="Sex"  value="false"/><br />
+
+    <input type="submit" value="ارسال" />
+
+
+
+</form>

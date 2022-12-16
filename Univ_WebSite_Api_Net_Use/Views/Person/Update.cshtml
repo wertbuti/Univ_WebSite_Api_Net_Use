@@ -1,0 +1,40 @@
+﻿@using Univ_WebSite_Api_Net_Use.Models
+@model Person
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+
+<form action="Update" method="post">
+    <input type="hidden" name="PersonID" value=@Model.PersonID />
+    نام<input type="text" name="Name" value=@Model.Name /><br />
+    نام خانوادگی<input type="text" name="Family" value=@Model.Family /><br />
+    عکس<input type="text" name="Picture" value="--" /><br />
+    تاریخ تولد<input type="date" name="BirthDate" value=@Model.BirthDate.ToShortDateString() /><br />
+
+
+    @{
+        if (Model.Sex == true)
+        {
+            <div>
+                مرد<input type="radio" name="Sex" value="true" checked /><br />
+                زن <input type="radio" name="Sex" value="false" /><br />
+            </div>
+
+        }
+        else
+        {
+            <div>
+                مرد<input type="radio" name="Sex" value="true" /><br />
+                زن <input type="radio" name="Sex" value="false" checked /><br />
+            </div>
+        }
+    }
+
+    <input type="submit" value="ارسال" />
+
+
+
+</form>
+

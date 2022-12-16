@@ -1,0 +1,24 @@
+﻿@using Univ_WebSite_Api_Net_Use.Models
+@model  List<Person>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@foreach (Person person in Model)
+            {
+<div>
+    @person.Name
+    @person.Family
+    @person.BirthDate
+    @person.Sex
+    @person.Picture
+
+
+
+
+
+</div>
+            }
+
